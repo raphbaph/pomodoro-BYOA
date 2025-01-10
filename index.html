@@ -8,14 +8,22 @@
 </head>
 <body>
     <div class="container">
-        <h1>Pomodoro Timer</h1>
+        <div class="header">
+            <h1>Pomodoro Timer <span class="emoji">🍅</span></h1>
+            <div class="mode-toggle">
+                <span id="toggle-label"></span>
+                <label class="switch">
+                    <input type="checkbox" id="toggle-mode">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
         <div class="timer">
             <span id="minutes">25</span>:<span id="seconds">00</span>
         </div>
         <div class="controls">
             <button id="toggle-play">Start</button>
             <button id="reset">Reset</button>
-            <button id="toggle-mode">Switch to Rest</button>
         </div>
         
         <div class="status">

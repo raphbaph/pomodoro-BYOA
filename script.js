@@ -52,10 +52,12 @@ function resetTimer() {
 }
 
 function toggleMode() {
-    isWorkTime = !isWorkTime;
+    const checkbox = document.getElementById('toggle-mode');
+    const toggleLabel = document.getElementById('toggle-label');
+    isWorkTime = !checkbox.checked;
     timeLeft = isWorkTime ? 25 * 60 : 5 * 60;
     statusText.textContent = isWorkTime ? 'Work Time' : 'Break Time';
-    toggleButton.textContent = isWorkTime ? 'Switch to Rest' : 'Switch to Work';
+    // toggleLabel.textContent = isWorkTime ? 'Switch to Rest' : 'Switch to Work';
     updateDisplay();
 }
 
@@ -66,4 +68,4 @@ updateDisplay();
 // Event listeners
 togglePlayButton.addEventListener('click', toggleTimer);
 resetButton.addEventListener('click', resetTimer);
-toggleButton.addEventListener('click', toggleMode); 
+document.getElementById('toggle-mode').addEventListener('change', toggleMode); 
